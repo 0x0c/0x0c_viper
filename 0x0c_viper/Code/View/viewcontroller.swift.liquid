@@ -1,0 +1,33 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+protocol {{ module_info.name }}ViewInput: AnyObject {
+    // MARK: Callback from presenter
+}
+
+class {{ module_info.name }}ViewController: UIViewController {
+
+    // MARK: Stored instance properties
+
+    var presenter: {{ module_info.name }}PresenterInput!
+
+    // MARK: Computed instance properties
+
+    // MARK: IBOutlets
+
+    // MARK: View Life-Cycle methods
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter.viewDidLoad()
+    }
+}
+
+extension {{ module_info.name }}ViewController: {{module_info.name}}ViewInput {}
