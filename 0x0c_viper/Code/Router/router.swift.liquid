@@ -20,11 +20,12 @@ class {{ module_info.name }}Router {
     }
 
     static func assembleModule() -> {{ module_info.name }}ViewController {
+        let view = {{ module_info.name }}ViewController()
         // TODO: Create a Storyboard with the same name as "{{ module_info.name }}".
         // TODO: And Change "{{ module_info.name }}" of "R.storyboard.{{ module_info.name }}" to lowercase.
-        guard let view = R.storyboard.{{ module_info.name }}.instantiateInitialViewController() else {
-            fatalError("Fail to load {{ module_info.name }}ViewController from Storyboard.")
-        }
+        // guard let view = R.storyboard.{{ module_info.name }}.instantiateInitialViewController() else {
+        //     fatalError("Fail to load {{ module_info.name }}ViewController from Storyboard.")
+        // }
         let interactor = {{ module_info.name }}Interactor()
         let router = {{ module_info.name }}Router(viewController: view)
         let presenter = {{ module_info.name }}Presenter(view: view, interactor: interactor, router: router)
