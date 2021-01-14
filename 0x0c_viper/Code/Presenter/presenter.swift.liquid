@@ -6,18 +6,26 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
+import UIKit
+
 protocol {{ module_info.name }}PresenterInput: AnyObject {
     // MARK: View Life-Cycle methods
+
     func viewDidLoad()
 
     // MARK: Other methods called from View
 }
 
 class {{ module_info.name }}Presenter {
+    // MARK: VIPER properties
 
     weak var view: {{ module_info.name }}ViewInput!
     var interactor: {{ module_info.name }}InteractorInput!
     var router: {{ module_info.name }}RouterInput!
+
+    // MARK: Stored instance properties
+
+    // MARK: Computed instance properties
 
     init(view: {{ module_info.name }}ViewInput, interactor: {{ module_info.name }}InteractorInput, router: {{ module_info.name }}RouterInput) {
         self.view = view
@@ -28,8 +36,8 @@ class {{ module_info.name }}Presenter {
 
 extension {{ module_info.name }}Presenter: {{ module_info.name }}PresenterInput {
     func viewDidLoad() {
-
+        // TODO: Implement if needed
     }
 }
- 
+
 extension {{ module_info.name }}Presenter: {{ module_info.name }}InteractorOutput {}

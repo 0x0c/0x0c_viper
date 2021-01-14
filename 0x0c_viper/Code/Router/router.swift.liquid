@@ -15,6 +15,10 @@ protocol {{ module_info.name }}RouterInput: AnyObject {
 class {{ module_info.name }}Router {
     private unowned let viewController: {{ module_info.name }}ViewController
 
+    init(viewController: {{ module_info.name }}ViewController) {
+        self.viewController = viewController
+    }
+
     static func assembleModule() -> {{ module_info.name }}ViewController {
         // TODO: Create a Storyboard with the same name as "{{ module_info.name }}".
         // TODO: And Change "{{ module_info.name }}" of "R.storyboard.{{ module_info.name }}" to lowercase.

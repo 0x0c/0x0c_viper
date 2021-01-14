@@ -6,6 +6,8 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
+import Foundation
+
 protocol {{ module_info.name }}InteractorInput: AnyObject {
     // MARK: Methods for modifying repository
 }
@@ -15,13 +17,16 @@ protocol {{ module_info.name }}InteractorOutput: AnyObject {
 }
 
 class {{ module_info.name }}Interactor {
-    // MARK: Stored instance properties
-
+    // MARK: VIPER property
     weak var presenter: {{ module_info.name }}InteractorOutput!
+
+    // MARK: Stored instance properties
 
     // MARK: Computed instance properties
 
     // MARK: Initializer
+    
+    init() {}
 
     // MARK: Other private methods
 }
