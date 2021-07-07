@@ -12,7 +12,7 @@ protocol {{ module_info.name }}ViewInput: AnyObject {
     // MARK: Callback from presenter
 }
 
-class {{ module_info.name }}ViewController: UIViewController {
+final class {{ module_info.name }}ViewController: UIViewController {
     // MARK: Stored instance properties
 
     var presenter: {{ module_info.name }}PresenterInput!
