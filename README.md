@@ -21,3 +21,7 @@ templates:
 ## Templates
 
 - [0x0c_viper](https://github.com/0x0c/generamba-catalog/blob/main/0x0c_viper/0x0c_viper.rambaspec)
+
+## Acknowledgement
+
+This repo was inspired by https://github.com/uhooi/generamba-catalog
